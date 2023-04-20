@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: royalblue;
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.heading {
+  padding: 15px 0 0 0;
+}
+.heading h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+  text-shadow: 3px 3px 7px black;
+  text-transform: uppercase;
+}
+.logos {
+  display: flex;
+  position: relative;
+  gap: 2rem;
+  background: #fff;
+  padding: 40px 0;
+  overflow: hidden;
+  margin-top: 4rem;
+}
+
+.logos::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.7) 100%,
+    rgba(0, 0, 0, 0.7) 100%,
+    rgba(0, 0, 0, 7) 100%
+  );
+  opacity: 0.7;
+  filter: blur(25px);
+}
+
+.logos::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.7) 100%,
+    rgba(0, 0, 0, 0.7) 100%,
+    rgba(0, 0, 0, 7) 100%
+  );
+  opacity: 0.7;
+  filter: blur(25px);
+}
+
+.logos .logos-slide {
+  display: flex;
+  gap: 40px;
+  animation: 35s slide infinite linear;
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos .logos-slide img {
+  height: 40px;
+}
